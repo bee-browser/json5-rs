@@ -92,6 +92,8 @@ fn serializes_char() {
     serializes_to('/', r#""\/""#);
     serializes_to('\u{0008}', r#""\b""#);
     serializes_to('\u{000c}', r#""\f""#);
+    serializes_to('\u{2028}', r#""\u2028""#);
+    serializes_to('\u{2029}', r#""\u2029""#);
 }
 
 #[test]
